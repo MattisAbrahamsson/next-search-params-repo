@@ -1,21 +1,21 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 type SearchLayoutProps = {
     children: ReactNode;
 };
 
 export default function SearchLayout({ children }: SearchLayoutProps) {
-    // const [shouldRender, setShouldRender] = useState(false);
+    const [shouldRender, setShouldRender] = useState(false);
 
-    // useEffect(() => {
-    //     setShouldRender(true);
-    // }, []);
+    useEffect(() => {
+        setShouldRender(true);
+    }, []);
 
-    // if (!shouldRender) {
-    //     return null;
-    // }
+    if (!shouldRender) {
+        return null;
+    }
 
     return children;
 }
